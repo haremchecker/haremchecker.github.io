@@ -1,0 +1,169 @@
+<!-- 
+    - 'flow' by skye southcodes.tumblr.com
+    - modify as you please but please do not touch the credit
+    - any errors? need help? have questions? let me know!
+    southcodes.tumblr.com/inbox
+    
+    - normalize css by https://github.com/necolas
+    - fonts by google
+ 
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{title}</title>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="">
+ 
+    <link rel="shortcut icon" href="{favicon}">
+    <meta name="description" content="{MetaDescription}"/>
+ 
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+ 
+    <!-- normalize -->
+    <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
+    
+<style>
+ 
+/* quick costumization */
+ 
+:root {
+    --text: #333;
+    --background: rgb(255, 255, 255);
+    --links-color: #d865d8; 
+    --hover-links-color: purple;
+    --circle-links-color: purple;
+    --hover-circle-links-color: #000;
+}
+ 
+ 
+.tmblr-iframe {margin:.7rem;opacity:.6;-ms-transform: scale(0.85); /* IE 9 */-webkit-transform: scale(0.85); /* Safari */transform: scale(0.85);}
+.tmblr-iframe:hover {opacity:.8;}
+ 
+::-webkit-scrollbar-thumb:vertical {border-left:2px solid var(--links-color);}
+::-webkit-scrollbar {width:6px}
+::-webkit-scrollbar-track-piece{margin:5px 0;}
+ 
+pre {font-family:consolas;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4- */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;}      /* Internet Explorer 5.5+ */
+ 
+body, figure{margin:0;padding:0}
+html{font: 14px 'Open Sans', sans-serif;}
+body {font-size:14px;color:var(--text);background:var(--background);}
+a {text-decoration: none;color:var(--links-color);word-break:break-word;}
+a:hover {color:var(--hover-links-color)}
+blockquote {margin:0;padding:0;}
+img {max-width:100%;height: auto;display: block;margin: .7rem 0}
+hr {border:0;border-top:1px solid #aaa;margin:0;}
+ 
+/*  header  */
+ 
+header { 
+    margin-bottom:3rem
+}
+ 
+#container {
+    width:40rem;
+    margin:6rem auto 3rem;
+    max-width:80vw
+}
+ 
+h1{
+    font-family: 'Ubuntu Mono', monospace;
+}
+ 
+main {
+    display:flex;
+    flex-flow: row nowrap;
+}
+ 
+nav ul,nav li {list-style-type:none;margin:0;padding:0;}
+ 
+nav {
+    width:15rem;
+    max-width:10vw
+}
+ 
+#about  {
+    font-size: .9rem;
+    letter-spacing: .03rem;
+    margin:0 1rem
+}
+ 
+#links-navigation {
+    margin-top:1rem
+}
+ 
+.circle-link {
+    width:1.5rem;
+    height:1.5rem;
+    border-radius: 100%;
+    transition-duration: .2s;
+    margin-bottom: 2.5rem;
+}
+ 
+.circle-link:hover {
+    background:var(--hover-circle-links-color);
+}
+ 
+.link-one {
+    background:var(--circle-links-color);
+    opacity:1
+}
+ 
+.link-two {
+    background:var(--circle-links-color);
+    opacity:.5
+}
+ 
+.link-three {
+    background:var(--circle-links-color);
+    opacity:.2
+}
+</style>
+</head>
+<body>
+ 
+<section id="container">
+ 
+    <header>
+        <h1>title</h1>
+    </header>
+ 
+    <main>
+        
+ 
+        <nav id="links-navigation"><ul>
+            <li title="link name"><a href="link"><div class="circle-link link-one"></div></a></li>
+           
+            <li title="link name"><a href="link"><div class="circle-link link-two"></div></a></li>
+           
+            <li title="link name"><a href="link"><div class="circle-link link-three"></div></a></li>
+        </ul></nav>
+        
+        <section id="about">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio rem expedita repellat facere qui unde explicabo laborum corporis laboriosam deleniti non quia quo, dolor, la <p> udantium, ex tempora ipsum illum ab!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio rem expedita repellat facere qui unde explicabo laborum corporis laboriosam deleniti non quia quo, dolor, laudantium, ex tempora ipsum illum ab!
+            <p>   Lorem ipsum dolora    <a href="">egegege</a> sit amet consectetur adipisicing elit. Distinctio rem expedita repellat facere qui unde explicabo laborum corporis laboriosam deleniti non quia quo, dolor, laudantium, ex tempora ipsum illum ab!
+        </section>
+ 
+    </main>
+ 
+</section>
+ 
+ 
+<!-- do not touch -->
+<div style="position:fixed;bottom:1rem;right:1rem;font-size:.8rem;letter-spacing: .03rem;">
+    <a target="_blank" href="https://southcodes.tumblr.com/">SC</a>
+</div>
+ 
+</body>
+</html>
