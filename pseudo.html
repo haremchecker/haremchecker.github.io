@@ -225,7 +225,27 @@
     <!----- MEDIA GRID ----->
 
  <div class="search-container">
-   <input type="text" id="search-bar" placeholder="Search for a title...">
+   <input type="text" id="search" placeholder="&#128269; Search for media..." class="search-bar" onclick="expandSearch()">
+
+<style>
+  .search-bar {
+    padding: 10px;
+    width: 200px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    transition: width 0.3s ease;
+  }
+
+  .search-bar:focus {
+    width: 300px;
+    outline: none;
+    border-color: #007BFF;
+  }
+
+  .search-bar::placeholder {
+    color: #aaa;
+  }
+</style>
 </div>
  
     <section id="mediaGrid">
@@ -420,21 +440,30 @@ articles.forEach(article => mediaContainer.appendChild(article)); // Append sort
 <!----- SEARCHING ----->
  
  <script>
- const searchBar = document.getElementById('search-bar');
-const articles = document.querySelectorAll('article');
+  
+  const searchInput = document.getElementById("search");
+  const mediaGrid = document.querySelectorAll('.mediaGrid');
 
-searchBar.addEventListener('input', function() {
-  const query = searchBar.value.toLowerCase();
-  articles.forEach(article => {
-    const title = article.querySelector('.subtitle').textContent.toLowerCase();
-    if (title.includes(query)) {
-      article.style.display = '';
-    } else {
-      article.style.display = 'none';
-    }
+  searchInput.addEventListener("input", function() {
+    const query = searchInput.value.toLowerCase();
+    
+    mediaGrid.forEach(item => {
+      const title = item.querySelector('.subtitle').textContent.toLowerCase();
+      if (title.includes(query)) {
+        item.style.display = "";
+      } else {
+        item.style.display = "none";
+      }
+    });
   });
-});
   </script>
+
+ <script>
+function expandSearch() {
+  var searchBar = document.getElementById("search");
+  searchBar.style.width = "250px"; // Expands when clicked
+}
+</script>
  
 </body>
 </html>
