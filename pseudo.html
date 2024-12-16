@@ -441,19 +441,21 @@ articles.forEach(article => mediaContainer.appendChild(article)); // Append sort
  
  <script>
   
+ document.addEventListener("DOMContentLoaded", function() {
   const searchInput = document.getElementById("search");
-const articles = document.querySelectorAll('article');  // Target each article
+  const articles = document.querySelectorAll('article');
 
-searchInput.addEventListener("input", function() {
-  const query = searchInput.value.toLowerCase();
+  searchInput.addEventListener("input", function() {
+    const query = searchInput.value.toLowerCase();
 
-  articles.forEach(item => {
-    const title = item.querySelector('.subtitle').textContent.toLowerCase();
-    if (title.includes(query)) {
-      item.style.display = "";
-    } else {
-      item.style.display = "none";
-    }
+    articles.forEach(item => {
+      const title = item.querySelector('.subtitle') ? item.querySelector('.subtitle').textContent.toLowerCase() : '';
+      if (title.includes(query)) {
+        item.style.display = "";
+      } else {
+        item.style.display = "none";
+      }
+    });
   });
 });
   </script>
