@@ -442,20 +442,20 @@ articles.forEach(article => mediaContainer.appendChild(article)); // Append sort
  <script>
   
   const searchInput = document.getElementById("search");
-  const mediaGrid = document.querySelectorAll('.mediaGrid');
+const articles = document.querySelectorAll('article');  // Target each article
 
-  searchInput.addEventListener("input", function() {
-    const query = searchInput.value.toLowerCase();
-    
-    mediaGrid.forEach(item => {
-      const title = item.querySelector('.subtitle').textContent.toLowerCase();
-      if (title.includes(query)) {
-        item.style.display = "";
-      } else {
-        item.style.display = "none";
-      }
-    });
+searchInput.addEventListener("input", function() {
+  const query = searchInput.value.toLowerCase();
+
+  articles.forEach(item => {
+    const title = item.querySelector('.subtitle').textContent.toLowerCase();
+    if (title.includes(query)) {
+      item.style.display = "";
+    } else {
+      item.style.display = "none";
+    }
   });
+});
   </script>
 
  <script>
