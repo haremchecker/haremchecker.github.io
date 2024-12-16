@@ -61,8 +61,19 @@
     --title-font: 'Montserrat', sans-serif;
     --font-size: 15px;
  
+.mediaGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+article {
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 .hidden {
-  display: none;
+    display: none !important; /* Ensures no overrides affect this rule */
 }
  
 /*----- END VARIABLES: you don't need to edit the css after here -----*/
