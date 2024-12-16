@@ -463,12 +463,12 @@ articles.forEach(article => mediaContainer.appendChild(article)); // Append sort
   searchInput.addEventListener("input", function() {
     const query = searchInput.value.toLowerCase();
 
-    articles.forEach(item => {
-      const title = item.querySelector('.subtitle') ? item.querySelector('.subtitle').textContent.toLowerCase() : '';
-      if (title.includes(query)) {
-        item.classList.remove('hidden');
-      } else {
-        item.classList.add('hidden');
+   articles.forEach(item => {
+  const title = item.querySelector('.subtitle') ? item.querySelector('.subtitle').textContent.toLowerCase() : '';
+  if (title.includes(query)) {
+    item.classList.remove('hidden');
+  } else {
+    item.classList.add('hidden');
       }
     });
   });
