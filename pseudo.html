@@ -61,21 +61,7 @@
     --title-font: 'Montserrat', sans-serif;
     --font-size: 15px;
  
-.mediaGrid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
 
-article {
-    opacity: 1;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.hidden {
-    display: none !important; /* Ensures no overrides affect this rule */
-}
- 
 /*----- END VARIABLES: you don't need to edit the css after here -----*/
  
 </style>
@@ -236,31 +222,6 @@ article {
     <!----- END OF FILTERS ----->
  
     <!----- MEDIA GRID ----->
-
-<div class="search-container">
-   <input type="text" id="search" placeholder="&#128269; Search..." class="search-bar" onclick="expandSearch()">
-
-<style>
-  .search-bar {
-    padding: 10px;
-    width: 50px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    transition: width 0.3s ease;
-  }
-
-
-  .search-bar:focus {
-    width: 50px;
-    outline: none;
-    border-color: #007BFF;
-  }
-
-  .search-bar::placeholder {
-    color: #aaa;
-  }
-</style>
-</div>
  
     <section id="mediaGrid">
  
@@ -451,35 +412,7 @@ mediaContainer.innerHTML = ""; // Clear the container
 articles.forEach(article => mediaContainer.appendChild(article)); // Append sorted items
 </script>
 
-<!----- SEARCHING ----->
- 
- <script>
-  
- document.addEventListener("DOMContentLoaded", function() {
-  const searchInput = document.getElementById("search");
-  const articles = document.querySelectorAll('article');
 
-  searchInput.addEventListener("input", function() {
-    const query = searchInput.value.toLowerCase();
-
-   articles.forEach(item => {
-  const title = item.querySelector('.subtitle') ? item.querySelector('.subtitle').textContent.toLowerCase() : '';
-  if (title.includes(query)) {
-    item.classList.remove('hidden');
-  } else {
-    item.classList.add('hidden');
-      }
-    });
-  });
-});
-  </script>
-
- <script>
-function expandSearch() {
-  var searchBar = document.getElementById("search");
-  searchBar.style.width = "250px"; // Expands when clicked
-}
-</script>
  
 </body>
 </html>
