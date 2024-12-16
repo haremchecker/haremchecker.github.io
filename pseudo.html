@@ -74,9 +74,7 @@ article {
 }
 
 .hidden {
-  opacity: 0;
-  transform: translateX(-100%);
-  visibility: hidden;
+  display: none;
 }
  
 /*----- END VARIABLES: you don't need to edit the css after here -----*/
@@ -241,12 +239,12 @@ article {
     <!----- MEDIA GRID ----->
 
  <div class="search-container">
-   <input type="text" id="search" placeholder="&#128269; Search for media..." class="search-bar" onclick="expandSearch()">
+   <input type="text" id="search" placeholder="<i data-feather="search"></i>; Search..." class="search-bar" onclick="expandSearch()">
 
 <style>
   .search-bar {
     padding: 10px;
-    width: 200px;
+    width: 50px;
     border-radius: 20px;
     border: 1px solid #ccc;
     transition: width 0.3s ease;
