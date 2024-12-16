@@ -224,7 +224,7 @@
  
     <!----- MEDIA GRID ----->
  
-    <section>
+    <section id="mediaGrid">
  
         <!----- ================================
  
@@ -400,17 +400,17 @@
  <!----- SORTING ----->
 
  <script>
-  const mediaContainer = document.querySelector("#media-list"); // Replace with your actual container ID
-  const articles = Array.from(mediaContainer.querySelectorAll("article"));
+const mediaContainer = document.querySelector("#mediaGrid"); // Use your updated section ID
+const articles = Array.from(mediaContainer.querySelectorAll("article"));
 
-  articles.sort((a, b) => {
-    const titleA = a.querySelector(".subtitle").textContent.trim().toLowerCase();
-    const titleB = b.querySelector(".subtitle").textContent.trim().toLowerCase();
-    return titleA.localeCompare(titleB);
-  });
+articles.sort((a, b) => {
+  const titleA = a.querySelector(".subtitle").textContent.trim().toLowerCase();
+  const titleB = b.querySelector(".subtitle").textContent.trim().toLowerCase();
+  return titleA.localeCompare(titleB);
+});
 
-  mediaContainer.innerHTML = ""; // Clear the container
-  articles.forEach(article => mediaContainer.appendChild(article)); // Append sorted items
+mediaContainer.innerHTML = ""; // Clear the container
+articles.forEach(article => mediaContainer.appendChild(article)); // Append sorted items
 </script>
  
 </body>
