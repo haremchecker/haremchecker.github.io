@@ -457,19 +457,19 @@ articles.forEach(article => mediaContainer.appendChild(article)); // Append sort
  
  <script>
   
- document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   const searchInput = document.getElementById("search");
-  const articles = document.querySelectorAll('article');
+  const mediaGrid = document.querySelectorAll('.mediaGrid article'); // Adjust to target individual articles
 
   searchInput.addEventListener("input", function() {
     const query = searchInput.value.toLowerCase();
 
-    articles.forEach(item => {
-      const title = item.querySelector('.subtitle') ? item.querySelector('.subtitle').textContent.toLowerCase() : '';
+    mediaGrid.forEach(item => {
+      const title = item.querySelector('.subtitle').textContent.toLowerCase();
       if (title.includes(query)) {
-        item.classList.remove('hidden');
+        item.classList.remove("hidden"); // Show item
       } else {
-        item.classList.add('hidden');
+        item.classList.add("hidden"); // Hide item
       }
     });
   });
