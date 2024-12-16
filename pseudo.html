@@ -470,13 +470,6 @@ articles.forEach(article => mediaContainer.appendChild(article)); // Append sort
         item.classList.remove('hidden');
       } else {
         item.classList.add('hidden');
-
-    mediaGrid.forEach(item => {
-      const title = item.querySelector('.subtitle').textContent.toLowerCase();
-      if (title.includes(query)) {
-        item.classList.remove("hidden"); // Show item
-      } else {
-        item.classList.add("hidden"); // Hide item
       }
     });
   });
