@@ -309,6 +309,62 @@
                 </div>
             </div>
         </article>
+
+      <!-- item three -->
+ 
+        <article class="film one">
+            <img src="https://via.placeholder.com/250x375.png" alt="media image">
+ 
+            <div class="popup">
+                <p>
+                    Slide-in description goes here. 
+                </p>
+                <p>
+                    You can even write multiple paragraphs, separated by < p > and < /p >, if you want, and add fancy text styles, like <b>bold</b>, <i>italic</i>, and <u>underlined</u>.
+                </p>
+                <nav>
+                    <a href="/">link</a>
+                </nav>        
+            </div>
+ 
+            <div class="item-desc">
+                <a class="more"><i data-feather="plus"></i></a>
+ 
+                <div class="subtitle">Zebra</div>
+                <i>Subtitle</i>
+                <div class="rating">
+                    <i data-feather="star"></i>
+                </div>
+            </div>
+        </article>
+
+      <!-- item four -->
+ 
+        <article class="film one">
+            <img src="https://via.placeholder.com/250x375.png" alt="media image">
+ 
+            <div class="popup">
+                <p>
+                    Slide-in description goes here. 
+                </p>
+                <p>
+                    You can even write multiple paragraphs, separated by < p > and < /p >, if you want, and add fancy text styles, like <b>bold</b>, <i>italic</i>, and <u>underlined</u>.
+                </p>
+                <nav>
+                    <a href="/">link</a>
+                </nav>        
+            </div>
+ 
+            <div class="item-desc">
+                <a class="more"><i data-feather="plus"></i></a>
+ 
+                <div class="subtitle">Apple</div>
+                <i>Subtitle</i>
+                <div class="rating">
+                    <i data-feather="star"></i>
+                </div>
+            </div>
+        </article>
  
     <!-- ALL NEW MEDIA ITEMS MUST BE ADDED ABOVE THIS LINE -->
  
@@ -340,6 +396,22 @@
 <script src="https://seyche.github.io/external-files-hosting/pages/poppy.js"></script>
  
 <script>feather.replace()</script>
+
+ <!----- SORTING ----->
+
+ <script>
+  const mediaContainer = document.querySelector("#media-list"); // Replace with your actual container ID
+  const articles = Array.from(mediaContainer.querySelectorAll("article"));
+
+  articles.sort((a, b) => {
+    const titleA = a.querySelector(".subtitle").textContent.trim().toLowerCase();
+    const titleB = b.querySelector(".subtitle").textContent.trim().toLowerCase();
+    return titleA.localeCompare(titleB);
+  });
+
+  mediaContainer.innerHTML = ""; // Clear the container
+  articles.forEach(article => mediaContainer.appendChild(article)); // Append sorted items
+</script>
  
 </body>
 </html>
