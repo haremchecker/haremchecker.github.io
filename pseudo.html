@@ -223,6 +223,10 @@
     <!----- END OF FILTERS ----->
  
     <!----- MEDIA GRID ----->
+
+ <div class="search-container">
+   <input type="text" id="search-bar" placeholder="Search for a title...">
+</div>
  
     <section id="mediaGrid">
  
@@ -412,6 +416,25 @@ articles.sort((a, b) => {
 mediaContainer.innerHTML = ""; // Clear the container
 articles.forEach(article => mediaContainer.appendChild(article)); // Append sorted items
 </script>
+
+<!----- SEARCHING ----->
+ 
+ <script>
+ const searchBar = document.getElementById('search-bar');
+const articles = document.querySelectorAll('article');
+
+searchBar.addEventListener('input', function() {
+  const query = searchBar.value.toLowerCase();
+  articles.forEach(article => {
+    const title = article.querySelector('.subtitle').textContent.toLowerCase();
+    if (title.includes(query)) {
+      article.style.display = '';
+    } else {
+      article.style.display = 'none';
+    }
+  });
+});
+  </script>
  
 </body>
 </html>
