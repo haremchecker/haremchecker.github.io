@@ -63,11 +63,11 @@ CHANGING THE COLORS:
     Example: #ffffff for white.
     
     DEFAULTS:
-    text        dark gray   #383838
-    accent 1    pink        #ffc1f6
-    accent 2    orange      #ffddc1
-    accent 3    yellow      #fcfcab
-    accent 4    dark pink   #b280ab
+    text        dark gray   #7EABA6
+    accent 1    pink        #7E99AB
+    accent 2    orange      #7E83AB
+    accent 3    yellow      #8F7EAB
+    accent 4    dark pink   #A67EAB
     
     accent 2 should have a hue between accent 1 and 3.
     accent 4 should be a darker version of any other accent.
@@ -115,7 +115,7 @@ questions?
  
  
 <!-- Text that appears on the tab / browser window -->
-<title>faq</title>
+<title>Change Log</title>
  
  
 <link rel="shortcut icon" href="{Favicon}"/>
@@ -171,7 +171,7 @@ $(document).ready(function(){
     border-radius: 0px;
     padding:3px 4px 5px 4px;
     margin:20px 7px -2px 20px;
-    background-color:#ffffff;
+    background-color:#ebf9f4;
     border:1px solid #E0E0E0;
     border-radius: 5px;
     font-family:calibri;
@@ -199,7 +199,7 @@ body {
     padding:3%;
     font-family:'Karla', sans-serif;
     font-size:12px; /* font size */
-    color:#383838; /* normal text color */
+    color:#7EABA6; /* normal text color */
 }
  
 #wrapper {
@@ -267,9 +267,9 @@ background-color:transparent;
    left:0;
    bottom:-1px;
    height: 3px;
-   background: #ffddc1; /* accent 2 */
-   background: -webkit-linear-gradient(to right, #ffc1f6, #fcfcab);
-   background: linear-gradient(to right, #ffc1f6, #fcfcab);
+   background: #7E83AB; /* accent 2 */
+   background: -webkit-linear-gradient(to right, #7E99AB, #8F7EAB);
+   background: linear-gradient(to right, #7E99AB, #8F7EAB);
    /* accent 1 + accent 3 */
 }
  
@@ -279,8 +279,8 @@ background-color:transparent;
 }
  
 .header a {
-    color:#b280ab; /* accent 4 */
-    border-bottom:2px solid #ffc1f6; /* accent 1 */
+    color:#A67EAB; /* accent 4 */
+    border-bottom:2px solid #7E99AB; /* accent 1 */
     margin-left:3px;
     margin-right:3px;
 }
@@ -296,7 +296,7 @@ background-color:transparent;
  
 a#openall, a#closeall {
     cursor:help;
-    border-bottom:2px solid #ffddc1; /* accent 2 */
+    border-bottom:2px solid #7E83AB; /* accent 2 */
 }
  
  
@@ -314,17 +314,17 @@ a#openall, a#closeall {
 }
  
 .category:nth-child(4n+1){
-    border:2px solid #ffc1f6; /* accent 1 */
+    border:2px solid #7E99AB; /* accent 1 */
 }
 .category:nth-child(2n+2){
-    border:2px solid #ffddc1; /* accent 2 */
+    border:2px solid #7E83AB; /* accent 2 */
 }
 .category:nth-child(4n+3){
-    border:2px solid #fcfcab; /* accent 3 */
+    border:2px solid #8F7EAB; /* accent 3 */
 }
  
 .q {
-    background:white;
+    background:#ebf9f4;
     letter-spacing:0.5px;
     font-size:14px;
     padding:5px;
@@ -355,8 +355,8 @@ a#openall, a#closeall {
  
 /* links */
 .a a {
-    color:#b280ab; /* accent 4 */
-    background:white;
+    color:#A67EAB; /* accent 4 */
+    background:#ebf9f4;
     display:inline-block;
     width:150px;
     padding:5px 11px;
@@ -376,7 +376,7 @@ a#openall, a#closeall {
   height: 2px;
   bottom: 0;
   left:0;
-  background-color: #ffddc1; /* accent 2 */
+  background-color: #7E83AB; /* accent 2 */
   transition: all 0.7s ease, background-color 0.5s ease 0.2s;
   
   -webkit-transform: scaleX(0); 
@@ -386,7 +386,7 @@ a#openall, a#closeall {
   
 }
 .a a:hover:before{
-    background-color: #ffc1f6; /* accent 1 */
+    background-color: #7E99AB; /* accent 1 */
   -webkit-transform: scaleX(1);
       -ms-transform: scaleX(1);
           transform: scaleX(1);
@@ -398,17 +398,17 @@ a#openall, a#closeall {
     padding:10px;
 }
 .a p a {
-    color:#b280ab; /* accent 4 */
+    color:#A67EAB; /* accent 4 */
     cursor:pointer;
     display:inline;
     padding:0;
     margin:0;
     background:none;
-    border-bottom:2px solid #b280ab; /* accent 4 */
+    border-bottom:2px solid #A67EAB; /* accent 4 */
     transition:0.3s;
 }
 .a p a:hover {
-    border-bottom:2px solid #ffddc1; /* accent 2 */
+    border-bottom:2px solid #7E83AB; /* accent 2 */
 }
 .a p i, .a p em {
     opacity:0.5;
@@ -433,8 +433,8 @@ a#openall, a#closeall {
 <!--- edit header here ---->
 <div class="header">
     <a href="/">home</a>
-    <a href="/ask">contact</a>
-    <h1>faq</h1> <!-- title -->
+    <a href="https://github.com/haremchecker/haremchecker.github.io/issues">contact</a>
+    <h1>Updates</h1> <!-- title -->
     <a id="openall">open all</a>
     <a id="closeall">close all</a>
 </div>
@@ -450,7 +450,7 @@ a#openall, a#closeall {
  
 <!------------- start of category ------------->
 <div class="category">
-    <div class="q">question here</div>
+    <div class="q">[Date]</div>
     <div class="a">
         <p>
 This is where you add your text. Don't remove the (p) and (/p).
@@ -464,13 +464,10 @@ You can also insert <a href="https://www.google.com/">links</a>.
  
 <!------------- start of category ------------->
 <div class="category">
-    <div class="q">question here</div>
+    <div class="q">12/19/2024</div>
     <div class="a">
         <p>
-This is where you add your text. Don't remove the (p) and (/p).
-You can make line breaks like so:<br>
-You can also make <b>bold</b> or <i>italic</i> text.<br>
-You can also insert <a href="https://www.google.com/">links</a>.
+Update log added. Code on all pages adjusted to reflect. About site edited to include additional information. All coding and pages tested for readability and function.
         </p>
     </div>
 </div>
@@ -478,13 +475,10 @@ You can also insert <a href="https://www.google.com/">links</a>.
  
 <!------------- start of category ------------->
 <div class="category">
-    <div class="q">question here</div>
+    <div class="q">12/16/2024</div>
     <div class="a">
         <p>
-This is where you add your text. Don't remove the (p) and (/p).
-You can make line breaks like so:<br>
-You can also make <b>bold</b> or <i>italic</i> text.<br>
-You can also insert <a href="https://www.google.com/">links</a>.
+Front-end coding established and customised. Test titles added. All code tested, in working order.
         </p>
     </div>
 </div>
