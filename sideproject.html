@@ -9,7 +9,7 @@
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
  
-<title>{title}</title>
+<title>Donghua with Japanese Dubs</title>
  
     <head>
  
@@ -18,15 +18,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;800&display=swap');
  
 body {
-    background-color: #f5eded;
+    background-color: #7EABA6;
     letter-spacing: 0px;
     font-family: 'Work Sans', sans-serif;
-    color: #3d3434;
+    color: #7E83AB;
 }
  
 a {
     text-decoration: none;
-    color: #3d3434;
+    color: #7E83AB;
     transition-duration: 0.6s;  
     -moz-transition-duration: 0.6s;  
     -webkit-transition-duration: 0.6s;  
@@ -50,7 +50,7 @@ a:hover {
     -moz-transition-duration: 0.6s;  
     -webkit-transition-duration: 0.6s;  
     -o-transition-duration: 0.6s;
-    color: #3d3434;
+    color: #7E99AB;
     border: 1px solid #d9cdcd;
     border-radius: 10px;
     margin-right: 20px;
@@ -116,7 +116,7 @@ a:hover {
  
 #pagetitle::first-letter, #name::first-letter {
     font-weight: 800;
-    color: #ff8484;
+    color: #A67EAB;
     font-size: 110%;
 }
  
@@ -245,8 +245,8 @@ a:hover {
  
 <a href="BIO LINK HERE">
 <div id="muse">
-    <div id="icon"><img src="https://placehold.co/250x350">
-        <div id="name">first last</div>
+    <div id="icon"><img src="https://haremchecker.github.io/img/side/link-click-1-285x399.webp">
+        <div id="name">Link Click</div>
         <div id="bio">will appear short, but can scroll if needed. two lines looks best. </div>
     </div>
 </div>
@@ -331,7 +331,22 @@ a:hover {
 <div id="credit">
 <a href="https://anahilation.tumblr.com/" title="theme by ana"><span class="material-symbols-outlined">gesture</span></a>
 </div>
- 
+
+ <script>
+const mediaContainer = document.querySelector("#contain"); // Use your updated section ID
+const articles = Array.from(mediaContainer.querySelectorAll("muse"));
+
+articles.sort((a, b) => {
+  const titleA = a.querySelector(".name").textContent.trim().toLowerCase();
+  const titleB = b.querySelector(".name").textContent.trim().toLowerCase();
+  return titleA.localeCompare(titleB);
+});
+
+mediaContainer.innerHTML = ""; // Clear the container
+articles.forEach(article => mediaContainer.appendChild(article)); // Append sorted items
+</script>
+
+	
 </body>
  
 </html>
