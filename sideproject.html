@@ -139,7 +139,7 @@ a:hover {
     height: 60px;
     background-color: #7EABA6;
     padding: 10px;
-    border-bottom: 1px solid #d9cdcd;
+    border-bottom: 1px solid #8F7EAB;
     text-align: left;
     position: fixed;
 }
@@ -240,7 +240,6 @@ a:hover {
 </a>
  
 -->
-<section id="mediaGrid"> 
 <div id="contain">
  
 <a href="BIO LINK HERE">
@@ -325,27 +324,11 @@ a:hover {
 </a>
  
 </div>
-</section>
 <!---END MUSEBOX--->
  
 <div id="credit">
 <a href="https://anahilation.tumblr.com/" title="theme by ana"><span class="material-symbols-outlined">gesture</span></a>
 </div>
-</div>
-	
- <script>
-const mediaContainer = document.querySelector("#mediaGrid"); // Use your updated section ID
-const articles = Array.from(mediaContainer.querySelectorAll("muse"));
-
-articles.sort((a, b) => {
-  const titleA = a.querySelector(".name").textContent.trim().toLowerCase();
-  const titleB = b.querySelector(".name").textContent.trim().toLowerCase();
-  return titleA.localeCompare(titleB);
-});
-
-mediaContainer.innerHTML = ""; // Clear the container
-articles.forEach(article => mediaContainer.appendChild(article)); // Append sorted items
-</script>
 
 	
 </body>
